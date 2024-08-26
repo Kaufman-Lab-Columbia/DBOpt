@@ -19,11 +19,15 @@ pip install ....?
 ```
 
 ## Usage
-The DBOptimization function takes one input, X, which is the coordinates of points in d dimensional space. The algorithm along with the relevant hyperparameters must also be defined. These parameters include the bounds of the algorithms parameters to explore, the number of iterations to optimize the parameter space, and the number of initial parameter combinations to seed the parameter space before optimizing. 
+The primary function of DBOpt, DB_Optimization, requires coordinates (X), the clustering algorithm to be optimized, relevant hyperparameters, the number of iterations to optimize the parameter space, and the number of initial number parameter combinations to seed the parameter space before optimizing. 
 ### DBOpt-DBSCAN 
-For DBSCAN, the bounds for the parameters epsilon and min_samples must be defined. 
+For DBSCAN, the relevant parameters are eps and min_samples. Bounds for one or both of these parameters must be set. Bounds are input as a list:
 ```
 DB_Optimization(X, algorithm = 'DBSCAN', eps = [4,200], min_samples = [4,200], runs = 200, rand_n = 40)
+```
+Parameters can be held constant by inputting a float or int:
+```
+DB_Optimization(X, algorithm = 'DBSCAN', eps = [4,200], min_samples = 6, runs = 200, rand_n = 40)
 ```
 ### DBOpt-HDBSCAN
 HDBSCAN has two primary parameters, min_cluster_size and min_samples.
