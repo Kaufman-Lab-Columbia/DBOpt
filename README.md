@@ -40,7 +40,7 @@ OPTICS can be optimized with the xi method.
 DBOptimization(X, algorithm = 'OPTICS', xi = [0,0.5], min_samples = [4,200], runs = 200, rand_n = 40)
 ```
 ## License
-
+ClustSim is licensed with an MIT license. See LICENSE file for more information.
 ## Referencing
 
 ## Contact 
