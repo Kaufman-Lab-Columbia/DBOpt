@@ -4,6 +4,8 @@ DBOpt is a python program for efficient parameter selection tool for density bas
 
 ## Getting Started
 ### Dependencies
+- DBCV*
+- bayes-opt
 - sci-kit learn
 - numpy
 ### Installation
