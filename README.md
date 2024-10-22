@@ -75,8 +75,9 @@ The optimization can be plotted:
 parameter_sweep_plot = model.plot_optimization()
 ```
 
-![DBOpt optimization plot DBSCAN](https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1)
-
+<p align="center">
+    <img width=300 height=300 src="https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1">
+</p>
 
 ### Clustering
 The data is clustered via the fit function.
@@ -97,14 +98,17 @@ The clusters can be plotted where show_noise will determine if the noise is show
 cluster_plot = model.plot_clusters()
 ```
 
-![Cluster plot](https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c)
-
+<p align="center">
+    <img width=300 height=300 src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
+</p>
 
 ```
 cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_scores = True)
 ```
 
-![Cluster plot scores mapped](https://github.com/user-attachments/assets/46e5a5bd-f0ab-42ee-b228-ed1906ca6e10)
+<p align="center">
+    <img width=300 height=300 src="https://github.com/user-attachments/assets/46e5a5bd-f0ab-42ee-b228-ed1906ca6e10">
+</p>
 
 
 ## License
