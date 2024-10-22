@@ -55,10 +55,8 @@ model = DBOpt.DBOpt(X, algorithm = 'OPTICS', runs = 200, rand_n = 40,
 #### Importing Data
 The data can be multidimensional coordinates. Here we use the C01 simulation from the data folder.
 
-![scatter_plot](https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21)
-
-<p align="center" width="100%">
-    <img width="33%" src="https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21">
+<p align="center">
+    <img width=300 height=300 src="https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21">
 </p>
 
 We create an array X which is a 2D array with x positions in column 0 and y positions in column 1.
