@@ -51,6 +51,7 @@ The data can be multidimensional coordinates. Here we use the C01 simulation fro
 <p align="center">
   <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/c73f358a-8b41-4467-a926-0562fa86c605)
 </p>
+
 We create an array X which is a 2D array with x positions in column 0 and y positions in column 1.
 #### Optimizing parameters for the data
 Once hyperparameters have beeen set, the algorithm can be optimized for the data. 
