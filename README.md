@@ -56,7 +56,7 @@ model = DBOpt.DBOpt(X, algorithm = 'OPTICS', runs = 200, rand_n = 40,
 The data can be multidimensional coordinates. Here we use the C01 simulation from the data folder.
 
 <p align="center">
-    <img width=33% height=33% src="https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21">
+    <img width=45% height=45% src="https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21">
 </p>
 
 We create an array X which is a 2D array with x positions in column 0 and y positions in column 1.
@@ -76,7 +76,7 @@ parameter_sweep_plot = model.plot_optimization()
 ```
 
 <p align="center">
-    <img width=33% height=33% src="https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1">
+    <img width=45% height=45% src="https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1">
 </p>
 
 ### Clustering
@@ -99,7 +99,7 @@ cluster_plot = model.plot_clusters()
 ```
 
 <p align="center">
-    <img width=33% height=33% src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
+    <img width=45% height=45% src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
 </p>
 
 ```
