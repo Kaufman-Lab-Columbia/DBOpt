@@ -76,7 +76,7 @@ parameter_sweep_plot = model.plot_optimization()
 ```
 
 <p align="center">
-    <img width=45% height=45% src="https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1">
+    <img width=60% height=60% src="https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1">
 </p>
 
 ### Clustering
@@ -99,7 +99,7 @@ cluster_plot = model.plot_clusters()
 ```
 
 <p align="center">
-    <img width=45% height=45% src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
+    <img width=40% height=40% src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
 </p>
 
 ```
