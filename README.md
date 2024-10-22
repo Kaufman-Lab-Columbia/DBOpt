@@ -67,10 +67,10 @@ The optimization can be plotted:
 ```
 parameter_sweep_plot = model.plot_optimization()
 ```
-<p align="center">
-  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/4a3fe62c-e059-4bb7-90cc-d20f7d294179)
-</p>
-  
+
+![DBOpt optimization plot DBSCAN](https://github.com/user-attachments/assets/1487a4c1-44cf-4d0f-9913-a00ae383d1a1)
+
+
 ### Clustering
 The data is clustered via the fit function.
 ```
@@ -89,15 +89,16 @@ The clusters can be plotted where show_noise will determine if the noise is show
 ```
 cluster_plot = model.plot_clusters()
 ```
-<p align="center">
-  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/e7217963-6de8-4155-a87a-e5f3fef62f13)
-</p>
+
+![Cluster plot](https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c)
+
+
 ```
 cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_scores = True)
 ```
-<p align="center">
-  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/7cd0f56c-e724-4e92-a9c5-68c40413435b)
-</p>
+
+![Cluster plot scores mapped](https://github.com/user-attachments/assets/46e5a5bd-f0ab-42ee-b228-ed1906ca6e10)
+
 
 ## License
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
