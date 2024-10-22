@@ -1,6 +1,6 @@
 # DBOpt
 
-DBOpt is a python program for efficient, reproducible, and robust parameter selection for density based clusterering algorithms. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS.
+DBOpt is a python program enabling reproducible and robust parameter selection for density based clusterering algorithms. The method combines and efficient implementaion of density based cluster validation (DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read (paper cite here)
 
 ## Getting Started
 ### Dependencies
@@ -114,6 +114,7 @@ cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_score
 ## License
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
 ## Referencing
+Our cite here
 
 ## Contact 
 
