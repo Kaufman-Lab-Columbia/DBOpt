@@ -45,8 +45,14 @@ OPTICS can currently be optimized with the xi method.
 ```
 model = DBOpt.DBOpt(X, algorithm = 'OPTICS', xi = [0.05,0.5], min_samples = [4,200], runs = 200, rand_n = 40)
 ```
-
-### Optimizing the data
+### Optimizing the parameters
+#### Importing Data
+The data can be multidimensional coordinates. Here we use the C01 simulation from the data folder.
+<p align="center">
+  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/c73f358a-8b41-4467-a926-0562fa86c605)
+</p>
+We create an array X which is a 2D array with x positions in column 0 and y positions in column 1.
+#### Optimizing parameters for the data
 Once hyperparameters have beeen set, the algorithm can be optimized for the data. 
 ```
 model.optimize(X)
@@ -60,6 +66,10 @@ The optimization can be plotted:
 ```
 parameter_sweep_plot = model.plot_optimization()
 ```
+<p align="center">
+  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/4a3fe62c-e059-4bb7-90cc-d20f7d294179)
+</p>
+  
 ### Clustering
 The data is clustered via the fit function.
 ```
@@ -78,10 +88,15 @@ The clusters can be plotted where show_noise will determine if the noise is show
 ```
 cluster_plot = model.plot_clusters()
 ```
-
+<p align="center">
+  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/e7217963-6de8-4155-a87a-e5f3fef62f13)
+</p>
 ```
-cluster_plot_modified = model.plot_clusters(show_noise = False, ind_cluster_scores = True)
+cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_scores = True)
 ```
+<p align="center">
+  <img width="500" height="300" src=![image](https://github.com/user-attachments/assets/7cd0f56c-e724-4e92-a9c5-68c40413435b)
+</p>
 
 ## License
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
