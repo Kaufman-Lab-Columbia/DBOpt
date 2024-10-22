@@ -99,7 +99,7 @@ cluster_plot = model.plot_clusters()
 ```
 
 <p align="center">
-    <img width=300 height=300 src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
+    <img width=50% height=50% src="https://github.com/user-attachments/assets/fbee5fe3-5f78-450e-a79b-11631b96543c">
 </p>
 
 ```
@@ -107,7 +107,7 @@ cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_score
 ```
 
 <p align="center">
-    <img width=300 height=300 src="https://github.com/user-attachments/assets/46e5a5bd-f0ab-42ee-b228-ed1906ca6e10">
+    <img width=50% height=50% src="https://github.com/user-attachments/assets/46e5a5bd-f0ab-42ee-b228-ed1906ca6e10">
 </p>
 
 
