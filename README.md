@@ -5,18 +5,16 @@ DBOpt is a python program enabling reproducible and robust parameter selection f
 ## Getting Started
 ### Dependencies
 - k-DBCV
-- bayes-opt
+- BayesianOptimization
 - sci-kit learn
-- numpy
+- NumPy
+  
 ### Installation
 DBOpt can be installed via pip:
 ```
-pip install ....?
+check back later
 ```
-or
-```
-pip install ....?
-```
+
 
 ## Usage
 DBOpt class can be initialized by setting hyperparameters for the optimization. These include the algorithm to be optimized, the number of optimization iterations (runs), the number of initial parameter combinations to probe (rand_n), and the parameter space that is to be optimized. Each algorithm has its own set of parameters that can be optimized. More information about these parameters can be found in the corresponding scikit-learn documentation.
@@ -113,8 +111,11 @@ cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_score
 
 ## License
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
+
 ## Referencing
-Our cite here
+```
+In preparation, check back later. 
+```
 
 ## Contact 
-
+kaufmangroup.rubylab@gmail.com
