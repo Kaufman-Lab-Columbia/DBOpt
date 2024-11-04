@@ -12,7 +12,7 @@ DBOpt is a python program enabling reproducible and robust parameter selection f
 ### Installation
 DBOpt can be installed via pip:
 ```
-check back later
+pip install DBOpt
 ```
 
 
@@ -113,9 +113,9 @@ cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_score
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
 
 ## Referencing
-```
-In preparation, check back later. 
-```
+If you use DBOpt for your work, cite with the following (currently in preprint):
+
+Hammer, J. L., Devanny, A. J. & Kaufman, L. J. Density-based optimization for unbiased, reproducible clustering applied to single molecule localization microscopy. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024)
 
 ## Contact 
 kaufmangroup.rubylab@gmail.com
