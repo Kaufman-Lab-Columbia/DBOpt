@@ -22,31 +22,31 @@ DBOpt class can be initialized by setting hyperparameters for the optimization. 
 #### DBOpt-DBSCAN 
 For DBSCAN, the relevant parameters are eps and min_samples. Bounds for one or both of these parameters must be set. 
 ```
-model = DBOpt.DBOpt(X, algorithm = 'DBSCAN', runs = 200, rand_n = 40,
+model = DBOpt.DBOpt(algorithm = 'DBSCAN', runs = 200, rand_n = 40,
                     eps = [3,200], min_samples = [3,200])
 ```
 Parameters can be held constant:
 ```
-model = DBOpt.DBOpt(X, algorithm = 'DBSCAN', runs = 200, rand_n = 40,
+model = DBOpt.DBOpt(algorithm = 'DBSCAN', runs = 200, rand_n = 40,
                     eps = [4,200], min_samples = 6)
 ```
 #### DBOpt-HDBSCAN
 HDBSCAN has two primary parameters, min_cluster_size and min_samples.
 ```
-model = DBOpt.DBOpt(X, algorithm = 'HDBSCAN', runs = 200, rand_n = 40,
+model = DBOpt.DBOpt(algorithm = 'HDBSCAN', runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200])
 ```
 DBOpt is capable of optimizing addition parameters for HDBSCAN including cluster_selection_epsilon, cluster_selection_method, and alpha.
 In cases like these when parameter spaces are vastly different in size, it can be helpful to scale all parameters the same by setting scale_params = True. scale_params is set to False by default.
 ```
-model = DBOpt.DBOpt(X, algorithm = 'HDBSCAN',  runs = 200, rand_n = 40,
+model = DBOpt.DBOpt(algorithm = 'HDBSCAN',  runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200], eps = [0,200], method = [0,1], alpha = [0,1],
                     scale_params = True)
 ```
 #### DBOpt-OPTICS
 OPTICS can currently be optimized with the xi method.
 ```
-model = DBOpt.DBOpt(X, algorithm = 'OPTICS', runs = 200, rand_n = 40,
+model = DBOpt.DBOpt(algorithm = 'OPTICS', runs = 200, rand_n = 40,
                     xi = [0.05,0.5], min_samples = [4,200])
 ```
 ### Optimizing the parameters

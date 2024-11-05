@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from typing import Optional
 import numpy.typing as npt
 import matplotlib.figure
+
 def cluster_plot(
     X: npt.NDArray[np.float_], 
     labels: npt.NDArray[np.float_], 

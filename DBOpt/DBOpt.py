@@ -1,15 +1,15 @@
 # DBOpt Script
 #Joseph Hammer 2024
 
-from DBOpt_utility import constant_log, parameter_selector
-from DB_optimize import DB_Optimization
-from auto_plot import auto_plot_params
-from cluster_plots import cluster_plot
-import numpy as np
+from .DBOpt_utility import constant_log, parameter_selector
+from .DB_optimize import DB_Optimization
+from .auto_plot import auto_plot_params
+from .cluster_plots import cluster_plot
 
 #external libraries
 from sklearn.cluster import DBSCAN, HDBSCAN, OPTICS
-from DBCV import DBCV_score
+import kDBCV
+import numpy as np
 
 import numpy.typing as npt
 from typing import Optional, Union, List, Any, Tuple
@@ -213,7 +213,7 @@ class DBOpt:
             
             self.labels_ = clusterer.labels_
         
-        self.DBCV_score_, self.ind_clust_scores_ = DBCV_score(X,self.labels_, ind_clust_scores = True)
+        self.DBCV_score_, self.ind_clust_scores_ = kDBCV.DBCV_score(X,self.labels_, ind_clust_scores = True)
         
         
     def optimize_fit(

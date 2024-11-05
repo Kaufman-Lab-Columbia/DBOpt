@@ -3,7 +3,7 @@ import numpy as np
 
 from bayes_opt import BayesianOptimization
 from sklearn.cluster import DBSCAN, HDBSCAN, OPTICS
-import DBCV 
+import kDBCV
 
 import numpy.typing as npt
 from typing import Tuple, Dict, Optional, Any, Union, List
@@ -89,7 +89,7 @@ def black_box_DBSCAN(
     model.fit(X)
     labels = model.labels_
 
-    DBCV_score = DBCV.DBCV_score(X, labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
+    DBCV_score = kDBCV.DBCV_score(X, labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
 
     if DBCV_score[0] == -1:
         median_ind_clust_scores.append(-1)
@@ -143,7 +143,7 @@ def black_box_HDBSCAN(
         model.fit(X)
         labels = model.labels_
         
-        DBCV_score = DBCV.DBCV_score(X,labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
+        DBCV_score = kDBCV.DBCV_score(X,labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
 
         if DBCV_score[0] == -1:
             median_ind_clust_scores.append(-1)
@@ -178,7 +178,7 @@ def black_box_OPTICS(
     model.fit(X_coords_data)
     labels = model.labels_
 
-    DBCV_score = DBCV.DBCV_score(X_coords_data,labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
+    DBCV_score = kDBCV.DBCV_score(X_coords_data,labels, ind_clust_scores=True, mem_cutoff=mem_threshold, batch_mode = True)
 
     if DBCV_score[0] == -1:
         median_ind_clust_scores.append(-1)

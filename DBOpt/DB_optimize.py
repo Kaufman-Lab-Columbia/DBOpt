@@ -1,9 +1,9 @@
 #DB_optimize
-import numpy as np
-from bounds_utility import set_pbounds
-from optimize import optimize_algorithm
-from output_utility import output_data_sorter
+from .bounds_utility import set_pbounds
+from .optimize import optimize_algorithm
+from .output_utility import output_data_sorter
 
+import numpy as np
 import numpy.typing as npt
 from typing import Tuple, Dict, Optional, Any, Union
 

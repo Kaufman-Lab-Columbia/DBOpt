@@ -1,11 +1,12 @@
 # auto_plot 
-from parallel_plots import parallel_plot
-from countour_plots import contour_plot, dual_contour_plot
-from single_dim_plots import single_dim_plot, dual_single_dim_plot
+from .parallel_plots import parallel_plot
+from .countour_plots import contour_plot, dual_contour_plot
+from .single_dim_plots import single_dim_plot, dual_single_dim_plot
 
 from typing import Dict, Any
 import numpy.typing as npt
 import matplotlib.figure
+
 def auto_plot_params(
     sweep_arr: npt.NDArray[Any], 
     sel_params: Dict[str, float]
