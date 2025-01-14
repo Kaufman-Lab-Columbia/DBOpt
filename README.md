@@ -1,6 +1,6 @@
 # DBOpt
 
-DBOpt is a python program enabling reproducible and robust parameter selection for density based clusterering algorithms. The method combines and efficient implementaion of density based cluster validation (DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
+DBOpt is a python program enabling reproducible and robust parameter selection for density based clusterering algorithms. The method combines and efficient implementaion of density based cluster validation (k-DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
 
 ## Getting Started
 ### Dependencies
@@ -37,7 +37,7 @@ model = DBOpt.DBOpt(algorithm = 'HDBSCAN', runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200])
 ```
 DBOpt is capable of optimizing addition parameters for HDBSCAN including `cluster_selection_epsilon`, `cluster_selection_method`, and `alpha`.
-In cases like these when parameter spaces are vastly different in size, it can be helpful to scale all parameters the same by setting `scale_params = True`. `scale_params` is set to `False` by default.
+In cases like these when parameter spaces are vastly different in size, it can be helpful to scale all parameters to the same range by setting `scale_params = True`. `scale_params` is set to `False` by default.
 ```
 model = DBOpt.DBOpt(algorithm = 'HDBSCAN',  runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200], eps = [0,200], method = [0,1], alpha = [0,1],
