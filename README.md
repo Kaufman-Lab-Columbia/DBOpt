@@ -1,6 +1,6 @@
 # DBOpt
 
-DBOpt is a python program enabling reproducible and robust parameter selection for density based clusterering algorithms. The method combines and efficient implementaion of density based cluster validation (k-DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
+DBOpt is a python library enabling reproducible and robust parameter selection for density-based clusterering algorithms. The method combines an efficient implementaion of density based cluster validation (k-DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
 
 ## Getting Started
 ### Dependencies
@@ -17,7 +17,7 @@ pip install DBOpt
 
 
 ## Usage
-DBOpt class can be initialized by setting hyperparameters for the optimization. These include the algorithm to be optimized, the number of optimization iterations (`runs`), the number of initial parameter combinations to probe (`rand_n`), and the parameter space that is to be optimized. Each algorithm has its own set of parameters that can be optimized. More information about these parameters can be found in the corresponding scikit-learn documentation.
+The DBOpt class can be initialized by setting hyperparameters for the optimization. These include the algorithm to be optimized, the number of optimization iterations (`runs`), the number of initial parameter combinations to probe (`rand_n`), and the parameter space that is to be optimized. Each algorithm has its own set of parameters that can be optimized. More information about these parameters can be found in the corresponding scikit-learn documentation.
 
 #### DBOpt-DBSCAN 
 For DBSCAN, the relevant parameters are `eps` and `min_samples`. Bounds for one or both of these parameters must be set. 
