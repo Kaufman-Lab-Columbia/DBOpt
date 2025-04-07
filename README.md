@@ -1,12 +1,12 @@
 # DBOpt
 
-DBOpt is a python program enabling reproducible and robust parameter selection for density based clusterering algorithms. The method combines and efficient implementaion of density based cluster validation (DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
+DBOpt is a python library enabling reproducible and robust parameter selection for density-based clusterering algorithms. The method combines an efficient implementaion of density based cluster validation (k-DBCV) with Bayesian optimization to find optimal clustering algorithm parameters that maximize the DBCV score. DBOpt is currently compatible with the density based clustering algorithms: DBSCAN, HDBSCAN, and OPTICS. For more information about the DBOpt method read Hammer et al. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024).
 
 ## Getting Started
 ### Dependencies
 - k-DBCV
 - BayesianOptimization
-- sci-kit learn
+- scikit-learn
 - NumPy
   
 ### Installation
@@ -17,10 +17,10 @@ pip install DBOpt
 
 
 ## Usage
-DBOpt class can be initialized by setting hyperparameters for the optimization. These include the algorithm to be optimized, the number of optimization iterations (runs), the number of initial parameter combinations to probe (rand_n), and the parameter space that is to be optimized. Each algorithm has its own set of parameters that can be optimized. More information about these parameters can be found in the corresponding scikit-learn documentation.
+The DBOpt class can be initialized by setting hyperparameters for the optimization. These include the algorithm to be optimized, the number of optimization iterations (`runs`), the number of initial parameter combinations to probe (`rand_n`), and the parameter space that is to be optimized. Each algorithm has its own set of parameters that can be optimized. More information about these parameters can be found in the corresponding scikit-learn documentation.
 
 #### DBOpt-DBSCAN 
-For DBSCAN, the relevant parameters are eps and min_samples. Bounds for one or both of these parameters must be set. 
+For DBSCAN, the relevant parameters are `eps` and `min_samples`. Bounds for one or both of these parameters must be set. 
 ```
 model = DBOpt.DBOpt(algorithm = 'DBSCAN', runs = 200, rand_n = 40,
                     eps = [3,200], min_samples = [3,200])
@@ -31,33 +31,33 @@ model = DBOpt.DBOpt(algorithm = 'DBSCAN', runs = 200, rand_n = 40,
                     eps = [4,200], min_samples = 6)
 ```
 #### DBOpt-HDBSCAN
-HDBSCAN has two primary parameters, min_cluster_size and min_samples.
+HDBSCAN has two primary parameters, `min_cluster_size` and `min_samples`.
 ```
 model = DBOpt.DBOpt(algorithm = 'HDBSCAN', runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200])
 ```
-DBOpt is capable of optimizing addition parameters for HDBSCAN including cluster_selection_epsilon, cluster_selection_method, and alpha.
-In cases like these when parameter spaces are vastly different in size, it can be helpful to scale all parameters the same by setting scale_params = True. scale_params is set to False by default.
+DBOpt is capable of optimizing addition parameters for HDBSCAN including `cluster_selection_epsilon`, `cluster_selection_method`, and `alpha`.
+In cases like these when parameter spaces are vastly different in size, it can be helpful to scale all parameters to the same range by setting `scale_params = True`. `scale_params` is set to `False` by default.
 ```
 model = DBOpt.DBOpt(algorithm = 'HDBSCAN',  runs = 200, rand_n = 40,
                     min_cluster_size = [4,200], min_samples = [4,200], eps = [0,200], method = [0,1], alpha = [0,1],
                     scale_params = True)
 ```
 #### DBOpt-OPTICS
-OPTICS can currently be optimized with the xi method.
+OPTICS can currently be optimized with the `xi` method.
 ```
 model = DBOpt.DBOpt(algorithm = 'OPTICS', runs = 200, rand_n = 40,
                     xi = [0.05,0.5], min_samples = [4,200])
 ```
 ### Optimizing the parameters
 #### Importing Data
-The data can be multidimensional coordinates. Here we use the C01 simulation from the data folder.
+DBOpt can process n-dimensional data. Here we use the C01 simulation from the data folder.
 
 <p align="center">
     <img width=45% height=45% src="https://github.com/user-attachments/assets/e72dfc14-34ab-484f-816d-bf8d8e46da21">
 </p>
 
-We create an array X which is a 2D array with x positions in column 0 and y positions in column 1.
+We create an array `X` which is a 2D array with x positions in column 0 and y positions in column 1.
 #### Optimizing parameters for the data
 Once hyperparameters have beeen set, the algorithm can be optimized for the data. 
 ```
@@ -78,7 +78,7 @@ parameter_sweep_plot = model.plot_optimization()
 </p>
 
 ### Clustering
-The data is clustered via the fit function.
+The data is clustered via the `fit()` method.
 ```
 model.fit(X)
 ```
@@ -91,7 +91,7 @@ After fitting the labels and DBCV score can be stored:
 labels = model.labels_
 DBCV_score = model.DBCV_score_
 ```
-The clusters can be plotted where show_noise will determine if the noise is shown or not (Default = True) and setting ind_cluster_scores = True will plot clusters colormapped to the individual cluster scores instead of colored randomly (Default = False) :
+The clusters can be plotted where `show_noise` will determine if the noise is shown or not (Default = True) and setting `ind_cluster_scores = True` will plot clusters colormapped to the individual cluster scores instead of colored randomly (Default = False) :
 ```
 cluster_plot = model.plot_clusters()
 ```
