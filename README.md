@@ -117,5 +117,7 @@ If you use DBOpt for your work, cite with the following (currently in preprint):
 
 Hammer, J. L., Devanny, A. J. & Kaufman, L. J. Density-based optimization for unbiased, reproducible clustering applied to single molecule localization microscopy. Preprint at https://www.biorxiv.org/content/10.1101/2024.11.01.621498v1 (2024)
 
+![image](https://github.com/user-attachments/assets/9c684fd7-e327-4df2-a225-a5fce6187280)
+
 ## Contact 
 kaufmangroup.rubylab@gmail.com
