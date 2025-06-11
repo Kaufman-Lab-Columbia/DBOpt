@@ -113,7 +113,7 @@ cluster_plot_modified = model.plot_clusters(show_noise = True, ind_cluster_score
 DBOpt is licensed with an MIT license. See LICENSE file for more information.
 
 ## Referencing
-If you use ClustSim for your work, please cite with the following:
+If you use DBOpt for your work, please cite with the following:
 
 Hammer, J.L., Devanny, A.J. & Kaufman, L.J. Bayesian optimized parameter selection for density-based clustering applied to single molecule localization microscopy. Commun Biol 8, 902 (2025). https://doi.org/10.1038/s42003-025-08332-0
 
